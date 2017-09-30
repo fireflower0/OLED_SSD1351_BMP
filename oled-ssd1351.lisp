@@ -57,7 +57,7 @@
       (oled-cd-write +oled-data+ data))))
 
 ;; Open BMP file
-;; ファイルを読み込んで内容をバイト配列で返す
+;; Read the file and return the contents as byte array.
 (defun open-bmp-file ()
   (with-open-file (s "bmp/image.bmp" :direction :input :element-type '(unsigned-byte 8))
     (let ((buf (make-array (file-length s) :element-type '(unsigned-byte 8))))
